@@ -17,17 +17,19 @@ const jump = () => {
     let jumpCount = 0;
     const jumpInterval = setInterval(() => {
       const marioPosition = +window.getComputedStyle(mario).bottom.replace('px', '');
-      const currentSpeed = speed > 1 ? 1 : speed;
-      if (jumpCount < 15) {
-        mario.style.bottom = `${marioPosition + 15 * currentSpeed}px`;
-      } else if (jumpCount >= 15 && jumpCount < 30) {
-        mario.style.bottom = `${marioPosition - 15 * currentSpeed}px`;
+      const jumpIncrement = 18; 
+      const jumpDuration = 30; 
+
+      if (jumpCount < jumpDuration / 2) {
+        mario.style.bottom = `${marioPosition + jumpIncrement}px`; 
+      } else if (jumpCount < jumpDuration) {
+        mario.style.bottom = `${marioPosition - jumpIncrement}px`; 
       } else {
         clearInterval(jumpInterval);
         isJumping = false;
       }
       jumpCount++;
-    }, 10);
+    }, 15); 
   }
 };
 
