@@ -45,7 +45,7 @@ const checkCollision = () => {
     marioPosition = +window.getComputedStyle(mario).bottom.replace('px', '');
   }
 
-  if (pipePosition <= 70 && pipePosition > 0 && marioPosition <= 90) {
+  if (pipePosition <= 70 && pipePosition > 0 && marioPosition <= 80) {
     gameIsOver = true;
     clearInterval(loop);
     clearInterval(timerInterval);
