@@ -14,7 +14,7 @@ body {
 }
 
 .game-board {
-    
+
     width: 100%;
     height: 500px;
     border-bottom: 15px solid #6e97a1;
@@ -35,16 +35,16 @@ footer {
 
 
 .timer {
+    font-family: sans-serif;
     color: aliceblue;
     position: relative;
     text-align: center;
     font-size: 3rem;
     padding: 20px;
-    border: 2px solid rgba(230, 247, 0, 0.144);
     border-radius: 10px;
     margin-left: 40rem;
     margin-right: 40rem;
-   
+
 }
 
 .linha-timer {
@@ -149,7 +149,7 @@ footer {
 
      .background {
         background-repeat: no-repeat;
-        width: 1%;   
+        width: 1%;
      }
 
 
@@ -183,7 +183,7 @@ footer {
 
     @keyframes pipe-animation {
         from {
-            right: -190px; 
+            right: -190px;
         }
         to {
             right: 100%;

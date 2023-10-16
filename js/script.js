@@ -40,7 +40,7 @@ const checkCollision = () => {
     pipePosition = pipe.getBoundingClientRect().left;
     marioPosition = +window.getComputedStyle(mario).bottom.replace('px', '');
   } else {
-   
+
     pipePosition = pipe.offsetLeft;
     marioPosition = +window.getComputedStyle(mario).bottom.replace('px', '');
   }
@@ -76,7 +76,7 @@ let timerInterval = setInterval(() => {
   if (timer % 1000 === 0) {
     speed += 5;
   }
-  timerElement.innerText = `Tempo: ${timer / 100}s`;
+  timerElement.innerText = `Tempo: ${(timer / 100).toFixed(2)}s`;
 }, 10);
 
 
@@ -94,7 +94,7 @@ const resetGame = () => {
     if (timer % 5000 === 0) {
       speed += 1;
     }
-    timerElement.innerText = `Tempo: ${timer / 100}s`;
+    timerElement.innerText = `Tempo: ${(timer / 100).toFixed(2)}s`;
   }, 10);
   loop = setInterval(gameLoop, 10);
 };
